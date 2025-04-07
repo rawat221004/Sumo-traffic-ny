@@ -1,14 +1,89 @@
 <routes>
-    <!-- Early emergency vehicles -->
-    <trip id="ambulance_early" type="veh_ambulance" depart="10" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4"/>
-    <trip id="firefighter_early" type="veh_firefighter" depart="30" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="458106348#1"/>
-    <trip id="police_early" type="veh_police" depart="50" departLane="best" departPos="free" departSpeed="max" from="5671774#1" to="196117090#4"/>
+    <!-- Very early emergency vehicles (beginning of simulation) -->
+    <trip id="ambulance_early" type="veh_ambulance" depart="10" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="firefighter_early" type="veh_firefighter" depart="30" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="458106348#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="police_early" type="veh_police" depart="50" departLane="best" departPos="free" departSpeed="max" from="5671774#1" to="196117090#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
     
-    <!-- Emergency vehicles sorted by departure time -->
-    <trip id="ambulance_1" type="veh_ambulance" depart="100" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4"/>
-    <trip id="firefighter_1" type="veh_firefighter" depart="200" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="458106348#1"/>
-    <trip id="police_1" type="veh_police" depart="300" departLane="best" departPos="free" departSpeed="max" from="5671774#1" to="196117090#4"/>
-    <trip id="ambulance_2" type="veh_ambulance" depart="500" departLane="best" departPos="free" departSpeed="max" from="1088320654#1" to="5669922#0"/>
-    <trip id="firefighter_2" type="veh_firefighter" depart="600" departLane="best" departPos="free" departSpeed="max" from="420598332#0" to="446864090#1"/>
-    <trip id="police_2" type="veh_police" depart="700" departLane="best" departPos="free" departSpeed="max" from="36806903#1" to="464683321#1"/>
+    <!-- First wave of simultaneous emergency vehicles (around time 100) -->
+    <trip id="ambulance_1" type="veh_ambulance" depart="100" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="ambulance_1a" type="veh_ambulance" depart="105" departLane="best" departPos="free" departSpeed="max" from="5673309#1" to="5669866#2">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="police_1a" type="veh_police" depart="110" departLane="best" departPos="free" departSpeed="max" from="964015634#0" to="36806903#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Second wave of simultaneous emergency vehicles (around time 200) -->
+    <trip id="firefighter_1" type="veh_firefighter" depart="200" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="458106348#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="firefighter_1a" type="veh_firefighter" depart="205" departLane="best" departPos="free" departSpeed="max" from="1088320654#1" to="420598294#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="ambulance_1b" type="veh_ambulance" depart="210" departLane="best" departPos="free" departSpeed="max" from="36806903#1" to="464683321#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Third wave of simultaneous emergency vehicles (around time 300) -->
+    <trip id="police_1" type="veh_police" depart="300" departLane="best" departPos="free" departSpeed="max" from="5671774#1" to="196117090#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="police_1b" type="veh_police" depart="305" departLane="best" departPos="free" departSpeed="max" from="420596491#0" to="496980200#20">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="ambulance_1c" type="veh_ambulance" depart="310" departLane="best" departPos="free" departSpeed="max" from="420598332#0" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Fourth wave of simultaneous emergency vehicles (around time 400) -->
+    <trip id="firefighter_2a" type="veh_firefighter" depart="400" departLane="best" departPos="free" departSpeed="max" from="226041000#0" to="5671608#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="police_2a" type="veh_police" depart="405" departLane="best" departPos="free" departSpeed="max" from="5673157#0" to="388240124#12">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="ambulance_2a" type="veh_ambulance" depart="410" departLane="best" departPos="free" departSpeed="max" from="167922077#0" to="46522006#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Fifth wave of simultaneous emergency vehicles (around time 500) -->
+    <trip id="ambulance_2" type="veh_ambulance" depart="500" departLane="best" departPos="free" departSpeed="max" from="1088320654#1" to="5669922#0">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="firefighter_2b" type="veh_firefighter" depart="505" departLane="best" departPos="free" departSpeed="max" from="968394450#0" to="653471088#0">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="police_2b" type="veh_police" depart="510" departLane="best" departPos="free" departSpeed="max" from="420872194#0" to="5670170#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Sixth wave of simultaneous emergency vehicles (around time 600) -->
+    <trip id="firefighter_2" type="veh_firefighter" depart="600" departLane="best" departPos="free" departSpeed="max" from="420598332#0" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="ambulance_3" type="veh_ambulance" depart="605" departLane="best" departPos="free" departSpeed="max" from="496986803#14" to="1272152371">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="police_2c" type="veh_police" depart="610" departLane="best" departPos="free" departSpeed="max" from="464683341#9" to="-5670254#8">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Seventh wave of simultaneous emergency vehicles (around time 700) -->
+    <trip id="police_2" type="veh_police" depart="700" departLane="best" departPos="free" departSpeed="max" from="36806903#1" to="464683321#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="firefighter_3" type="veh_firefighter" depart="705" departLane="best" departPos="free" departSpeed="max" from="496980200#13" to="1038772917#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    <trip id="ambulance_3a" type="veh_ambulance" depart="710" departLane="best" departPos="free" departSpeed="max" from="157014137#2" to="420352250#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
 </routes>

@@ -1,0 +1,28 @@
+Loading net-file from 'C:\Users\rawat\2025-04-08-01-38-34\2025-04-08-02-42-45\osm.net.xml.gz' ... done (1528ms).
+Loading additional-files from 'C:\Users\rawat\2025-04-08-01-38-34\2025-04-08-02-42-45\emergency_vehicles.add.xml' ... done (0ms).
+Loading additional-files from 'C:\Users\rawat\2025-04-08-01-38-34\2025-04-08-02-42-45\osm.poly.xml.gz' ... done (2918ms).
+Loading route-files incrementally from 'C:\Users\rawat\2025-04-08-01-38-34\2025-04-08-02-42-45\osm.passenger.trips.xml'
+Loading route-files incrementally from 'C:\Users\rawat\2025-04-08-01-38-34\2025-04-08-02-42-45\emergency_routes.rou.xml'
+Loading done.
+Simulation started with time: 0.00.
+Error: The edge '420596491#0' within the route for trip 'police_1b' is not known.
+ The route can not be build.
+Quitting (on error).
+Simulation ended at time: 202.00.
+Performance:
+ Duration: 25.15s
+ Real time factor: 8.03245
+ UPS: 991.291554
+Vehicles:
+ Inserted: 252 (Loaded: 507)
+ Running: 238
+ Waiting: 0
+Statistics (avg of 14):
+ RouteLength: 909.33
+ Speed: 9.95
+ Duration: 98.36
+ WaitingTime: 11.00
+ TimeLoss: 32.57
+ DepartDelay: 0.38
+DijkstraRouter answered 310 queries and explored 1795.78 edges on average.
+DijkstraRouter spent 0.36s answering queries (1.15ms on average).
