@@ -1,0 +1,40 @@
+<additional>
+    <!-- Priority 0: Normal Car -->
+    <vType id="veh_passenger" vClass="passenger" guiShape="passenger" color="1,1,0" priority="0"/>
+
+    <!-- Priority 1: Ambulance - Highest priority -->
+    <vType id="veh_ambulance" vClass="emergency" guiShape="emergency" color="1,1,1" priority="1" 
+           speedFactor="1.5" lcStrategic="1000" lcSpeedGain="10" lcKeepRight="0"
+           jmIgnoreJunctionFoeProb="1.0" jmIgnoreFoeProb="1.0" jmIgnoreFoeSpeed="1.0"
+           impatience="1.0" laneChangeMode="0" speedDev="0" sigma="0">
+        <param key="has.bluelight.device" value="true"/>
+        <param key="device.rerouting.probability" value="1.0"/>
+        <param key="device.rerouting.period" value="10"/>
+        <param key="junctions.foe.speed.threshold" value="100"/>
+        <param key="emergency" value="true"/>
+    </vType>
+
+    <!-- Priority 2: Firefighter -->
+    <vType id="veh_firefighter" vClass="emergency" guiShape="firebrigade" color="1,0,0" priority="2" 
+           speedFactor="1.4" lcStrategic="1000" lcSpeedGain="10" lcKeepRight="0"
+           jmIgnoreJunctionFoeProb="1.0" jmIgnoreFoeProb="1.0" jmIgnoreFoeSpeed="1.0"
+           impatience="1.0" laneChangeMode="0" speedDev="0" sigma="0">
+        <param key="has.bluelight.device" value="true"/>
+        <param key="device.rerouting.probability" value="1.0"/>
+        <param key="device.rerouting.period" value="10"/>
+        <param key="junctions.foe.speed.threshold" value="100"/>
+        <param key="emergency" value="true"/>
+    </vType>
+
+    <!-- Priority 3: Police -->
+    <vType id="veh_police" vClass="emergency" guiShape="police" color="0,0,1" priority="3" 
+           speedFactor="1.3" lcStrategic="1000" lcSpeedGain="10" lcKeepRight="0"
+           jmIgnoreJunctionFoeProb="1.0" jmIgnoreFoeProb="1.0" jmIgnoreFoeSpeed="1.0"
+           impatience="1.0" laneChangeMode="0" speedDev="0" sigma="0">
+        <param key="has.bluelight.device" value="true"/>
+        <param key="device.rerouting.probability" value="1.0"/>
+        <param key="device.rerouting.period" value="10"/>
+        <param key="junctions.foe.speed.threshold" value="100"/>
+        <param key="emergency" value="true"/>
+    </vType>
+</additional>

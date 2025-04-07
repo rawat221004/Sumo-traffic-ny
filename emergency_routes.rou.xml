@@ -1,0 +1,11 @@
+<routes>
+    <!-- Create emergency vehicles with different departure times to avoid initial conflicts -->
+    <trip id="ambulance_1" type="veh_ambulance" depart="100" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4"/>
+    <trip id="ambulance_2" type="veh_ambulance" depart="500" departLane="best" departPos="free" departSpeed="max" from="1088320654#1" to="5669922#0"/>
+
+    <trip id="firefighter_1" type="veh_firefighter" depart="200" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="458106348#1"/>
+    <trip id="firefighter_2" type="veh_firefighter" depart="600" departLane="best" departPos="free" departSpeed="max" from="420598332#0" to="446864090#1"/>
+
+    <trip id="police_1" type="veh_police" depart="300" departLane="best" departPos="free" departSpeed="max" from="5671774#1" to="196117090#4"/>
+    <trip id="police_2" type="veh_police" depart="700" departLane="best" departPos="free" departSpeed="max" from="36806903#1" to="464683321#1"/>
+</routes>
