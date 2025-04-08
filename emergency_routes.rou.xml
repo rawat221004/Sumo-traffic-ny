@@ -17,7 +17,7 @@
     <trip id="ambulance_1a" type="veh_ambulance" depart="105" departLane="best" departPos="free" departSpeed="max" from="5673309#1" to="5669866#2">
         <param key="junctionModel.ignoreIDs" value="true"/>
     </trip>
-    <trip id="police_1a" type="veh_police" depart="110" departLane="best" departPos="free" departSpeed="max" from="964015634#0" to="36806903#1">
+    <trip id="police_1a" type="veh_police" depart="110" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="36806903#1">
         <param key="junctionModel.ignoreIDs" value="true"/>
     </trip>
     

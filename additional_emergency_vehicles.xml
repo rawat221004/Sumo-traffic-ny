@@ -1,0 +1,86 @@
+<additional>
+    <!-- Additional emergency vehicle types (not already defined in emergency_vehicles.add.xml) -->
+    <!-- Fixed tau values to be >= 1.0 to avoid warnings -->
+    <vType id="veh_ambulance_urgent" vClass="emergency" guiShape="emergency" color="1,0,0.5" maxSpeed="60" accel="3.0" decel="5.0" sigma="0.4" tau="1.0" speedFactor="1.7" speedDev="0.05" jamThreshold="5"/>
+    <vType id="veh_firefighter_heavy" vClass="emergency" guiShape="firebrigade" color="0.8,0.4,0" maxSpeed="40" accel="2.0" decel="4.0" sigma="0.6" tau="1.2" speedFactor="1.3" speedDev="0.1" jamThreshold="15"/>
+    <vType id="veh_police_swat" vClass="emergency" guiShape="police" color="0.1,0.1,0.5" maxSpeed="50" accel="2.7" decel="4.5" sigma="0.5" tau="1.0" speedFactor="1.5" speedDev="0.08" jamThreshold="8"/>
+    <vType id="veh_disaster_response" vClass="emergency" guiShape="truck" color="1,0.7,0" maxSpeed="40" accel="2.0" decel="3.8" sigma="0.6" tau="1.2" speedFactor="1.3" speedDev="0.12" jamThreshold="12"/>
+    <vType id="veh_medical_transport" vClass="emergency" guiShape="delivery" color="1,1,1" maxSpeed="45" accel="2.3" decel="4.0" sigma="0.5" tau="1.0" speedFactor="1.2" speedDev="0.1" jamThreshold="10"/>
+    <vType id="veh_hazmat" vClass="emergency" guiShape="truck" color="1,1,0" maxSpeed="35" accel="1.8" decel="3.5" sigma="0.6" tau="1.2" speedFactor="1.1" speedDev="0.1" jamThreshold="15"/>
+    
+    <!-- Staggered emergency vehicle trips to ensure visibility -->
+    <!-- First group - starting at time 15 with 10 second intervals -->
+    <trip id="ambulance_urgent_1" type="veh_ambulance_urgent" depart="15" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="hazmat_1" type="veh_hazmat" depart="25" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="196117090#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="swat_1" type="veh_police_swat" depart="35" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="disaster_1" type="veh_disaster_response" depart="45" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="5671608#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="medical_1" type="veh_medical_transport" depart="55" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="5669922#0">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="firefighter_heavy_1" type="veh_firefighter_heavy" depart="65" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Second group - 120-250 time window -->
+    <trip id="ambulance_urgent_2" type="veh_ambulance_urgent" depart="120" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="hazmat_2" type="veh_hazmat" depart="140" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="196117090#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="swat_2" type="veh_police_swat" depart="160" departLane="best" departPos="free" departSpeed="max" from="1088320654#1" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="disaster_2" type="veh_disaster_response" depart="180" departLane="best" departPos="free" departSpeed="max" from="36806903#1" to="5671608#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="medical_2" type="veh_medical_transport" depart="200" departLane="best" departPos="free" departSpeed="max" from="5671774#1" to="5669922#0">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="firefighter_heavy_2" type="veh_firefighter_heavy" depart="220" departLane="best" departPos="free" departSpeed="max" from="420598332#0" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <!-- Third group - 350-470 time window -->
+    <trip id="ambulance_urgent_3" type="veh_ambulance_urgent" depart="350" departLane="best" departPos="free" departSpeed="max" from="420496529#1" to="127693103#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="hazmat_3" type="veh_hazmat" depart="370" departLane="best" departPos="free" departSpeed="max" from="5672187#1" to="196117090#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="swat_3" type="veh_police_swat" depart="390" departLane="best" departPos="free" departSpeed="max" from="1088320654#1" to="36806903#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="disaster_3" type="veh_disaster_response" depart="410" departLane="best" departPos="free" departSpeed="max" from="167922077#0" to="5671608#4">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="medical_3" type="veh_medical_transport" depart="430" departLane="best" departPos="free" departSpeed="max" from="968394450#0" to="5669922#0">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+    
+    <trip id="firefighter_heavy_3" type="veh_firefighter_heavy" depart="450" departLane="best" departPos="free" departSpeed="max" from="420872194#0" to="446864090#1">
+        <param key="junctionModel.ignoreIDs" value="true"/>
+    </trip>
+</additional>

@@ -3,12 +3,12 @@
 <!-- generated on 2025-04-08 02:44:49 by Eclipse SUMO sumo Version 1.22.0
 -->
 
-<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
         <net-file value="osm.net.xml.gz"/>
         <!-- Load vehicle type definitions first -->
-        <additional-files value="emergency_vehicles.add.xml,osm.poly.xml.gz"/>
+        <additional-files value="emergency_vehicles.add.xml,osm.poly.xml.gz,additional_emergency_vehicles.xml"/>
         <!-- Then load route files -->
         <route-files value="osm.passenger.trips.xml,emergency_routes.rou.xml"/>
     </input>
@@ -33,4 +33,4 @@
         <gui-settings-file value="osm.view.xml"/>
     </gui_only>
 
-</sumoConfiguration>
+</configuration>
